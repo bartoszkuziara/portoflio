@@ -102,11 +102,7 @@ nav ul li a span+span {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 80vh;
-    background-image: url("../img/bg-main.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
+    background-color: #009ddc;
     animation: intro 5s;
     z-index: -1;
 
@@ -127,16 +123,13 @@ nav ul li a span+span {
 
 
 
-
-
-
 @keyframes intro {
     0% {
-        background-color: #fff;
+        background-color: transparent;
     }
 
     25% {
-        background-color: transparent;
+        background-color: #009ddc;
     }
 
     50% {
@@ -147,7 +140,7 @@ nav ul li a span+span {
 
     100% {
 
-        background-color: transparent;
+        background-color: #009ddc;
     }
 }
 
@@ -194,4 +187,75 @@ nav ul li a span+span {
 
 .fab {
     transform: rotate(90deg);
+}
+
+button.shaker {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 15px 25px;
+    background-color: #009ddc;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: shaker 6s infinite;
+}
+
+@keyframes shaker {
+    0% {
+        left: 50%;
+    }
+
+    90% {
+        left: 50%;
+    }
+
+    90,
+    01% {
+        left: 49%;
+    }
+
+    91% {
+        left: 51%
+    }
+
+    92% {
+        left: 49%;
+    }
+
+    93% {
+        left: 51%
+    }
+
+    94% {
+        left: 49%;
+    }
+
+    95% {
+        left: 51%
+    }
+
+    96% {
+        left: 49%;
+    }
+
+    97% {
+        left: 51%
+    }
+
+    100% {
+        left: 50%;
+    }
+
+}
+
+button.shaker:hover {
+    background-color: #fff;
+    color: #111;
+
 }
