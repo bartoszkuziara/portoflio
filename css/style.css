@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin-ext');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,600&subset=latin-ext');
 /* 
 font-family: 'Roboto Mono', monospace;
 font-family: 'Roboto', sans-serif; 
+font-family: 'Open Sans Condensed', sans-serif;
 */
 
 * {
@@ -17,8 +17,6 @@ nav {
     top: 0px;
     right: 80px;
     padding: 25px 15px;
-    /* background-color: rgba(0, 0, 0, 0.4); */
-
 }
 
 nav ul li {
@@ -32,31 +30,12 @@ nav ul li {
     box-sizing: border-box;
 }
 
-/* nav ul li::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 0);
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition: 0.3s;
-
-}
-
-nav ul li:hover::after {
-    width: 100%;
-
-} */
-
 nav ul li a {
     font-family: 'Open Sans', sans-serif;
     color: #111;
     text-decoration: none;
     font-size: 14px;
     text-transform: uppercase;
-
 }
 
 nav ul li a span {
@@ -64,13 +43,11 @@ nav ul li a span {
     top: 0;
     left: 0;
     transition: 0.3s;
-
 }
 
 nav ul li:hover span {
     left: 0;
     top: -100px;
-
     font-weight: 600;
 }
 
@@ -86,46 +63,26 @@ nav ul li a span+span {
     top: 100px;
     left: 50%;
     transform: translate(-50%, 0);
-
     color: #009ddc;
 }
 
-
-
-
-
 .animationHeader {
     position: absolute;
-
-    top: 50%;
+    bottom: 5px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     background-color: #009ddc;
     animation: intro 5s;
     z-index: -1;
-
 }
-
-/* .animationHeader h1 {
-    display: inline-block;
-    margin: 20px 0 0 0px;
-    padding: 3vh;
-    font-size: 7vh;
-    color: white;
-    font-family: serif;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-
-} */
-
 
 
 @keyframes intro {
     0% {
         background-color: transparent;
+        color: transparent;
     }
 
     25% {
@@ -133,21 +90,33 @@ nav ul li a span+span {
     }
 
     50% {
-        ;
+        color: transparent;
     }
 
-    75% {}
+    55% {
+        color: #fff;
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    65% {
+        color: #fff;
+    }
+
+
 
     100% {
 
         background-color: #009ddc;
+        color: #fff;
     }
 }
 
 .git p {
     position: fixed;
     padding: 5px 5px 5px 5px;
-
     width: 32vh;
     height: 32vh;
     top: 20vh;
@@ -191,7 +160,7 @@ nav ul li a span+span {
 
 button.shaker {
     position: absolute;
-    bottom: 100px;
+    bottom: 5vh;
     left: 50%;
     transform: translate(-50%, 0);
     padding: 15px 25px;
@@ -254,8 +223,55 @@ button.shaker {
 
 }
 
+div.picture {
+    background-image: url("../img/bg-main.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+
+}
+
+.picture img {
+
+    top: 0;
+    height: 80vh;
+    width: auto;
+
+}
+
 button.shaker:hover {
     background-color: #fff;
     color: #111;
+}
 
+header h1,
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #fff;
+    position: absolute;
+}
+
+
+
+header h1 {
+    top: 35vh;
+    left: 25%;
+    transform: translate(-50%, 0);
+    font-size: 3em;
+    animation: intro color 5s;
+}
+
+header h2 {
+    top: 45vh;
+    left: 25%;
+    transform: translate(-50%, 0);
+    font-size: 2em;
+    font-weight: 300;
+    animation: intro color 5s;
 }
