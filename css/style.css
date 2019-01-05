@@ -202,6 +202,7 @@ div.picture {
     header h1 {
         top: 60vh;
         left: 50%;
+        transform: translate(-50%, 0);
         font-size: 1.6em;
 
     }
